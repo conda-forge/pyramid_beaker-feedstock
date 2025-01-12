@@ -1,5 +1,5 @@
 {% set name = "pyramid_beaker" %}
-{% set version = "0.8" %}
+{% set version = "0.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 77dc658c2c84c8c384b6c07f60dd9d2ccaa30df97a147c790db43636f1e8d441
+  sha256: ccc513eb4cfb5b41657f29b6e6b28ca2bd7b3bf9fda91306a1029aee92d1cfa5
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
