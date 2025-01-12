@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyramid_beaker-
 
 Home: https://pypi.org/project/pyramid_beaker/
 
-Package license: BSD
+Package license: BSD-3-Clause
 
 Summary: A session factory for the Pyramid web framework backed by the Beaker sessioning system.
 
