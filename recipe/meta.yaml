@@ -6,24 +6,26 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 77dc658c2c84c8c384b6c07f60dd9d2ccaa30df97a147c790db43636f1e8d441
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - pyramid
     - beaker
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - {{ name }}
 
